@@ -1,0 +1,11 @@
+
+CREATE DATABASE Proyecto;
+USE Proyecto;
+ 
+  CREATE TABLE [Departament](
+	[DepartamentId] [int] IDENTITY(1,1) NOT NULL,
+	[Name] [varchar](50) NULL,
+	[State] [tinyint] NOT NULL,
+	PRIMARY KEY (DepartamentId)
+	);
+	DBCC CHECKIDENT ([Departament], RESEED,1); -- obliga a que el contador de llave primaria empiece en 1 
